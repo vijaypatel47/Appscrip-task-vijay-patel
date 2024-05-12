@@ -1,0 +1,24 @@
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-icon-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-icon {
+  padding-right: 25px;
+}
+.section-name-container {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.section-name {
+  padding-right: 75px;
+  font-weight: 500;
+}

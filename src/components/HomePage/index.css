@@ -1,0 +1,117 @@
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.discover-our-product-heading {
+  font-size: 50px;
+  text-align: center;
+  font-weight: 400;
+}
+.sort-filter-container {
+  border: none;
+}
+.page-desc {
+  font-size: 20px;
+  text-align: center;
+  color: #252020;
+}
+.filter-btn {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+.filter-rec-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-filter-cont {
+  display: flex;
+  align-items: center;
+}
+.break-line {
+  border: 1px solid #e5e5e5;
+  width: 100%;
+  display: flex;
+  align-self: flex-start;
+}
+.customizable-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 30vh;
+}
+.customizable-head {
+  display: flex;
+  align-items: center;
+}
+.customizable {
+  font-size: 15px;
+  font-weight: 700;
+}
+.ideal-for-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.ideal-for-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.down-arrow-icon {
+  height: 16px;
+  width: 16px;
+  background-color: transparent;
+}
+.product-list-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  flex-grow: 1;
+}
+.main-card-container {
+  display: flex;
+  margin-top: 10px;
+}
+.footer-container {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.first-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.fotter-para {
+  font-size: 15px;
+}
+.subscribe-button {
+  margin-left: 30px;
+  border-radius: 8px;
+  background-color: transparent;
+  color: gray;
+}
+.input {
+  background-color: aliceblue;
+  color: gray;
+  padding-left: 5px;
+}
+.second-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-copyright {
+  text-align: center;
+}

@@ -1,0 +1,32 @@
+.item-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin-left: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 399px;
+}
+.product-img {
+  background-color: transparent;
+  width: 90%;
+  height: 70%;
+}
+.name-heart-container {
+  margin: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.heart {
+  height: 20px;
+  width: 20px;
+  padding-left: 5px;
+}
+.product-name {
+  font-size: 15px;
+}
