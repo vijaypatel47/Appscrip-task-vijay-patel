@@ -15,6 +15,7 @@ class HomePage extends Component {
     rawArrow: false,
     paternArrow: false,
     showFilter: false,
+    heartIcon: false,
   }
 
   componentDidMount() {
@@ -25,6 +26,10 @@ class HomePage extends Component {
     const response = await fetch('https://fakestoreapi.com/products')
     const data = await response.json()
     this.setState({blogsData: data})
+  }
+
+  onclickHeartIcon = () => {
+    this.setState(prevState => ({heartIcon: !prevState.heartIcon}))
   }
 
   onClickShowHideFilter = () => {
@@ -93,6 +98,7 @@ class HomePage extends Component {
       rawArrow,
       paternArrow,
       showFilter,
+      heartIcon,
     } = this.state
     return (
       <div className="header-container">
@@ -100,15 +106,19 @@ class HomePage extends Component {
         <h1 className="discover-our-product-heading">DISCOVER OUR PRODUCTS</h1>
         <p className="page-desc">
           {' '}
-          Lorem ipsum dolor sit amet consecuter. Amet esure perseure roncus{' '}
-          <br /> sylfins to done. Dolor integer to the preicd cmvid amet dolor.
+          Lorem ipsum dolor sit amet consecuter. Amet esure perseure
+          <br /> roncus to done. Dolor integer to the preicd cmvid amet dolor.
         </p>
         <div className="filter-rec-container">
           <div className="item-filter-cont">
             <p>3425 ITEMS</p>
             <button className="filter-btn" type="button">
               <img
-                src="https://res.cloudinary.com/drgheojrx/image/upload/v1715491537/arrow-left_kz2hov.png"
+                src={
+                  showFilter
+                    ? 'https://res.cloudinary.com/drgheojrx/image/upload/v1715524312/arrow-left_qj6zj0.png'
+                    : 'https://res.cloudinary.com/drgheojrx/image/upload/v1715491537/arrow-left_kz2hov.png'
+                }
                 className="arrow"
                 alt="arrow"
                 onClick={this.onClickShowHideFilter}
@@ -137,7 +147,11 @@ class HomePage extends Component {
                 <div className="ideal-for-content">
                   <h3>IDEAL FOR</h3>
                   <img
-                    src="https://res.cloudinary.com/drgheojrx/image/upload/v1715503353/arrow-left_cziupz.png"
+                    src={
+                      idealArrow
+                        ? 'https://res.cloudinary.com/drgheojrx/image/upload/v1715524426/arrow-left_ufjnqy.png'
+                        : 'https://res.cloudinary.com/drgheojrx/image/upload/v1715503353/arrow-left_cziupz.png'
+                    }
                     alt="down-arrow"
                     className="down-arrow-icon"
                     onClick={this.onClickIdealArrow}
@@ -150,7 +164,11 @@ class HomePage extends Component {
                 <div className="ideal-for-content">
                   <h3>OCCASION</h3>
                   <img
-                    src="https://res.cloudinary.com/drgheojrx/image/upload/v1715503353/arrow-left_cziupz.png"
+                    src={
+                      occasionArrow
+                        ? 'https://res.cloudinary.com/drgheojrx/image/upload/v1715524426/arrow-left_ufjnqy.png'
+                        : 'https://res.cloudinary.com/drgheojrx/image/upload/v1715503353/arrow-left_cziupz.png'
+                    }
                     alt="down-arrow"
                     className="down-arrow-icon"
                     onClick={this.onClickoccasionArrow}
@@ -163,7 +181,11 @@ class HomePage extends Component {
                 <div className="ideal-for-content">
                   <h3>WORK</h3>
                   <img
-                    src="https://res.cloudinary.com/drgheojrx/image/upload/v1715503353/arrow-left_cziupz.png"
+                    src={
+                      workArrow
+                        ? 'https://res.cloudinary.com/drgheojrx/image/upload/v1715524426/arrow-left_ufjnqy.png'
+                        : 'https://res.cloudinary.com/drgheojrx/image/upload/v1715503353/arrow-left_cziupz.png'
+                    }
                     alt="down-arrow"
                     className="down-arrow-icon"
                     onClick={this.onClickWorkArrow}
@@ -176,7 +198,11 @@ class HomePage extends Component {
                 <div className="ideal-for-content">
                   <h3>FABRIC</h3>
                   <img
-                    src="https://res.cloudinary.com/drgheojrx/image/upload/v1715503353/arrow-left_cziupz.png"
+                    src={
+                      fabricArrow
+                        ? 'https://res.cloudinary.com/drgheojrx/image/upload/v1715524426/arrow-left_ufjnqy.png'
+                        : 'https://res.cloudinary.com/drgheojrx/image/upload/v1715503353/arrow-left_cziupz.png'
+                    }
                     alt="down-arrow"
                     className="down-arrow-icon"
                     onClick={this.onClickFabricArrow}
@@ -189,7 +215,11 @@ class HomePage extends Component {
                 <div className="ideal-for-content">
                   <h3>SEGMENT</h3>
                   <img
-                    src="https://res.cloudinary.com/drgheojrx/image/upload/v1715503353/arrow-left_cziupz.png"
+                    src={
+                      segmentArrow
+                        ? 'https://res.cloudinary.com/drgheojrx/image/upload/v1715524426/arrow-left_ufjnqy.png'
+                        : 'https://res.cloudinary.com/drgheojrx/image/upload/v1715503353/arrow-left_cziupz.png'
+                    }
                     alt="down-arrow"
                     className="down-arrow-icon"
                     onClick={this.onClickSegmentArrow}
@@ -202,7 +232,11 @@ class HomePage extends Component {
                 <div className="ideal-for-content">
                   <h3>SUITABLE</h3>
                   <img
-                    src="https://res.cloudinary.com/drgheojrx/image/upload/v1715503353/arrow-left_cziupz.png"
+                    src={
+                      suitableArrow
+                        ? 'https://res.cloudinary.com/drgheojrx/image/upload/v1715524426/arrow-left_ufjnqy.png'
+                        : 'https://res.cloudinary.com/drgheojrx/image/upload/v1715503353/arrow-left_cziupz.png'
+                    }
                     alt="down-arrow"
                     className="down-arrow-icon"
                     onClick={this.onClickSuitableArrow}
@@ -215,7 +249,11 @@ class HomePage extends Component {
                 <div className="ideal-for-content">
                   <h3>RAW MATERIALS</h3>
                   <img
-                    src="https://res.cloudinary.com/drgheojrx/image/upload/v1715503353/arrow-left_cziupz.png"
+                    src={
+                      rawArrow
+                        ? 'https://res.cloudinary.com/drgheojrx/image/upload/v1715524426/arrow-left_ufjnqy.png'
+                        : 'https://res.cloudinary.com/drgheojrx/image/upload/v1715503353/arrow-left_cziupz.png'
+                    }
                     alt="down-arrow"
                     className="down-arrow-icon"
                     onClick={this.onClickRawArrow}
@@ -228,7 +266,11 @@ class HomePage extends Component {
                 <div className="ideal-for-content">
                   <h3> PATTERN</h3>
                   <img
-                    src="https://res.cloudinary.com/drgheojrx/image/upload/v1715503353/arrow-left_cziupz.png"
+                    src={
+                      paternArrow
+                        ? 'https://res.cloudinary.com/drgheojrx/image/upload/v1715524426/arrow-left_ufjnqy.png'
+                        : 'https://res.cloudinary.com/drgheojrx/image/upload/v1715503353/arrow-left_cziupz.png'
+                    }
                     alt="down-arrow"
                     className="down-arrow-icon"
                     onClick={this.onClickPatternArrow}
@@ -241,7 +283,11 @@ class HomePage extends Component {
           )}
           <ul className="product-list-container">
             {blogsData.map(each => (
-              <ProductItem blogData={each} key={each.id} />
+              <ProductItem
+                blogData={each}
+                key={each.id}
+                isHeartActive={heartIcon}
+              />
             ))}
           </ul>
         </div>
@@ -309,10 +355,12 @@ class HomePage extends Component {
                 className="social-img"
               />
               <h4>metta muse ACCEPTS</h4>
-              <img
-                src="https://res.cloudinary.com/drgheojrx/image/upload/v1715515485/Frame_136278_xnogis.png"
-                alt="payoption"
-              />
+              <div className="payoption-mobile">
+                <img
+                  src="https://res.cloudinary.com/drgheojrx/image/upload/v1715515485/Frame_136278_xnogis.png"
+                  alt="payoption"
+                />
+              </div>
             </div>
           </div>
           <p className="footer-copyright">
@@ -324,3 +372,4 @@ class HomePage extends Component {
   }
 }
 export default HomePage
+
